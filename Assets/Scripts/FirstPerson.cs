@@ -12,6 +12,8 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private Transform pies;
     [SerializeField] private float alturaSalto;
 
+    [SerializeField] private Camera cam;
+
     void Start()
     {
         // bloquea el raton en el centro de la pantalla y lo oculta
@@ -22,18 +24,26 @@ public class FirstPerson : MonoBehaviour
     
     void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal"); 
+        
+        AplicarGravedad();
+        DeteccionSuelo();
+        MoverYRotar();
+     
+    }
+    private void MoverYRotar()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector2 input = new Vector2(h, v).normalized;
-        float angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
-        if(input.sqrMagnitude > 0)
+
+        transform.eulerAngles = new Vector3(0, cam.transform.eulerAngles.y, 0);
+
+        if (input.sqrMagnitude > 0)
         {
+            float angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg + cam.transform.eulerAngles.y;
             Vector3 movimiento = Quaternion.Euler(0, angulo, 0) * Vector3.forward;
             controller.Move(movimiento * 5 * Time.deltaTime);
         }
-        AplicarGravedad();
-        DeteccionSuelo();
-     
     }
     private void AplicarGravedad()
     {
