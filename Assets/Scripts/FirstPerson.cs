@@ -65,6 +65,10 @@ public class FirstPerson : MonoBehaviour
     public void RecibirDanho(float danhoRecibido)
     {
         vidas -= danhoRecibido;
+        if(vidas <=0)
+        {
+            Destroy(gameObject);
+        }
     }
     // esto sirve para dibujar cualquier figura en la escena
     private void OnDrawGizmos()

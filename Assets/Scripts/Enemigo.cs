@@ -13,6 +13,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] float radioDeteccion;
     [SerializeField] private LayerMask queEsJugador;
     [SerializeField] private float danhoAtaque;
+    private bool danhoRealizado = false;
 
     private Animator anim;
    
@@ -27,7 +28,8 @@ public class Enemigo : MonoBehaviour
     {
         Perseguir();
 
-        if(ventanaAbierta)
+        // solo si la ventana y esta abierta, y aun no ha hecho daño
+        if(ventanaAbierta && danhoRealizado == false)
         {
            DetectarJugador();
         }
@@ -43,6 +45,7 @@ public class Enemigo : MonoBehaviour
             {
                 collDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
             }
+            danhoRealizado = true;
         }
     }
 
@@ -66,6 +69,7 @@ public class Enemigo : MonoBehaviour
     {
         // cuando termino de atacar, vuelvo a moverme
         agent.isStopped = false;
+        danhoRealizado = false;
         anim.SetBool("Attacking", false);
     }
     private void AbrirVenatanaAtaque()
