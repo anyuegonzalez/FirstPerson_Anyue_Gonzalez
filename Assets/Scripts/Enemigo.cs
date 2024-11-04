@@ -7,13 +7,14 @@ public class Enemigo : MonoBehaviour
 {
     private NavMeshAgent agent;
     private FirstPerson player;
+    private bool attacking = false;
 
-    private Animator animator;
+    private Animator anim;
    
     void Start()
     {
        agent = GetComponent<NavMeshAgent>();
-       animator = GetComponent<Animator>();
+       anim = GetComponent<Animator>();
 
        player = GameObject.FindObjectOfType<FirstPerson>(); //tipo player te devuelve
     }  
@@ -26,16 +27,20 @@ public class Enemigo : MonoBehaviour
         // si la distancia q nos queda hacia el objeto cae por debajo del stoppingDistance
         if(agent.remainingDistance <= agent.stoppingDistance)
         {
+            // me paro ante el
             agent.isStopped = true;
+            anim.SetBool("Attacking", true);
         }
-    }
-    public void ActivarAnimacion()
-    {
-        animator.
-    }
 
-    //Activar animacion de ataque 
-    // 1. Obtener el componente con el que podemos tirar animaciones -> animator y almacenarlo en un avariable
-    // 2. a traves de dicha variable buscar un metodo para activar el bool attacking
+    }
+    
+    #region Eventos de animación
+    private void FinAtaque()
+    {
+        // cuando termino de atacar, vuelvo a moverme
+        agent.isStopped = false;
+        anim.SetBool("Attacking", false);
+    }
+    #endregion
 
 }
