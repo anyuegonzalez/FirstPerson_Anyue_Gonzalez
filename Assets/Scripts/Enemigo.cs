@@ -41,6 +41,14 @@ public class Enemigo : MonoBehaviour
         agent.isStopped = false;
         anim.SetBool("Attacking", false);
     }
+    private void AbrirVenatanaAtaque()
+    {
+
+    } 
+    private void CerrarVenatanaAtaque()
+    {
+
+    }
     #endregion
 
 }
