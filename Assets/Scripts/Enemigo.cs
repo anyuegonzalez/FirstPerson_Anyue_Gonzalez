@@ -18,5 +18,17 @@ public class Enemigo : MonoBehaviour
     {
         // tengo q definir como destino la posicion del player
         agent.SetDestination(player.transform.position);
+
+
+        // si la distancia q nos queda hacia el objeto cae por debajo del stoppingDistance
+        if(agent.remainingDistance <= agent.stoppingDistance)
+        {
+            agent.isStopped = true;
+        }
     }
+
+    //Activar animacion de ataque 
+    // 1. Obtener el componente con el que podemos tirar animaciones -> animator y almacenarlo en un avariable
+    // 2. a traves de dicha variable buscar un metodo para activar el bool attacking
+
 }
