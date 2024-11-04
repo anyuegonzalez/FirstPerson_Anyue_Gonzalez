@@ -11,7 +11,8 @@ public class Enemigo : MonoBehaviour
     private bool ventanaAbierta = false;
     [SerializeField] private Transform attackPoint;
     [SerializeField] float radioDeteccion;
-    [SerializeField] private LayerMask jugador;
+    [SerializeField] private LayerMask queEsJugador;
+    [SerializeField] private float danhoAtaque;
 
     private Animator anim;
    
@@ -33,7 +34,7 @@ public class Enemigo : MonoBehaviour
     }
     private void DetectarJugador()
     {
-        Collider[] collJugador = Physics.OverlapSphere(attackPoint.position, radioDeteccion, jugador);
+        Collider[] collDetectados = Physics.OverlapSphere(attackPoint.position, radioDeteccion, queEsJugador);
     }
 
     private void Perseguir()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -51,16 +52,15 @@ public class FirstPerson : MonoBehaviour
         movimientoVertical.y += escalaGravedad * Time.deltaTime;
         controller.Move(movimientoVertical * Time.deltaTime);
     }
-    private void DeteccionSuelo()
+    private bool DeteccionSuelo()
     {
         // tengo que lanzar una bola de deteccion en mis pies para detectar si 
-        Collider[] collsDetectados = Physics.OverlapSphere(pies.position, radioDeteccion, queEsSuelo);
-        // si existe al menos un collider bajo mis pies
-        if(collsDetectados.Length > 0)
-        {
-            movimientoVertical.y = 0;
-            Saltar();
-        }
+        bool resultado = Physics.CheckSphere(pies.position, radioDeteccion, queEsSuelo);
+        return resultado;
+
+    }
+    private void RecibirDanho()
+    {
 
     }
     // esto sirve para dibujar cualquier figura en la escena
