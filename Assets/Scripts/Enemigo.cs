@@ -7,10 +7,13 @@ public class Enemigo : MonoBehaviour
 {
     private NavMeshAgent agent;
     private FirstPerson player;
+
+    private Animator animator;
    
     void Start()
     {
        agent = GetComponent<NavMeshAgent>();
+       animator = GetComponent<Animator>();
 
        player = GameObject.FindObjectOfType<FirstPerson>(); //tipo player te devuelve
     }  
@@ -25,6 +28,10 @@ public class Enemigo : MonoBehaviour
         {
             agent.isStopped = true;
         }
+    }
+    public void ActivarAnimacion()
+    {
+        animator.
     }
 
     //Activar animacion de ataque 
