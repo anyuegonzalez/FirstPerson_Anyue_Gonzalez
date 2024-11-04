@@ -2119,10 +2119,10 @@ GameObject:
   m_Component:
   - component: {fileID: 452755561821245256}
   - component: {fileID: 8931000943401235543}
+  - component: {fileID: 5282551042944696757}
   - component: {fileID: 2367339524170457187}
   - component: {fileID: 2009037479817733416}
   - component: {fileID: 4456624758777436101}
-  - component: {fileID: 5282551042944696757}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2191,6 +2191,7 @@ MonoBehaviour:
     m_Bits: 8
   pies: {fileID: 1190219898}
   alturaSalto: 3
+  vidas: 0
   cam: {fileID: 1807449872}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Video;
 
 public class FirstPerson : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private LayerMask queEsSuelo;
     [SerializeField] private Transform pies;
     [SerializeField] private float alturaSalto;
+    [SerializeField] private float vidas;
 
     [SerializeField] private Camera cam;
 
@@ -59,9 +62,9 @@ public class FirstPerson : MonoBehaviour
         return resultado;
 
     }
-    private void RecibirDanho()
+    public void RecibirDanho(float danhoRecibido)
     {
-
+        vidas -= danhoRecibido;
     }
     // esto sirve para dibujar cualquier figura en la escena
     private void OnDrawGizmos()

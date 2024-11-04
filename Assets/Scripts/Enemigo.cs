@@ -35,6 +35,15 @@ public class Enemigo : MonoBehaviour
     private void DetectarJugador()
     {
         Collider[] collDetectados = Physics.OverlapSphere(attackPoint.position, radioDeteccion, queEsJugador);
+
+        // si al menos hemos detectado un collider....
+        if(collDetectados.Length > 0 )
+        {
+            for (int i = 0; i < collDetectados.Length; i++)
+            {
+                collDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
+            }
+        }
     }
 
     private void Perseguir()
