@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
@@ -62,6 +63,10 @@ public class Enemigo : MonoBehaviour
             agent.isStopped = true;
             anim.SetBool("Attacking", true);
         }
+    }
+    public void RecibirDanho(float danhoRecibido)
+    {
+        
     }
 
     #region Eventos de animación
