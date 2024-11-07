@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 1977094089}
+  misDatos: {fileID: 11400000, guid: beb5f0b9863582a4f99e6abb8a49a5de, type: 2}
 --- !u!1 &1579855185
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,6 +6322,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Enemigo '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465143683988951386, guid: b6702ac27ca55e74396ed013835acce8,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465143683988951386, guid: b6702ac27ca55e74396ed013835acce8,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465143683988951386, guid: b6702ac27ca55e74396ed013835acce8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 3045874933549936423, guid: b6702ac27ca55e74396ed013835acce8,
         type: 3}
