@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!54 &35576356
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!1001 &281328481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!1 &738886860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!1 &1373055753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!1 &1807449868
 GameObject:
   m_ObjectHideFlags: 0
@@ -7419,7 +7419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!4 &452755561821245256
 Transform:
   m_ObjectHideFlags: 0
@@ -7587,6 +7587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: vidas
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207843871841665980, guid: b6702ac27ca55e74396ed013835acce8,
+        type: 3}
+      propertyPath: radioDeteccion
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1465143683988951386, guid: b6702ac27ca55e74396ed013835acce8, type: 3}
@@ -8038,7 +8043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!114 &3201177441872276609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8052,7 +8057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 1164209273}
-  multiplicadorDanho: 0.25
+  multiplicadorDanho: 10
 --- !u!54 &4456624758777436101
 Rigidbody:
   m_ObjectHideFlags: 0

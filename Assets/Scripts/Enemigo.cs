@@ -72,9 +72,12 @@ public class Enemigo : MonoBehaviour
             anim.SetBool("Attacking", true);
         }
     }
-    private void Morir()
+    public void Morir()
     {
+        agent.enabled = false;
+        anim.enabled = false;
         CambiarEstadoHuesos(false);
+        Destroy(gameObject, 10); // se destruye pasado esos frames el objeto
     }
     private void CambiarEstadoHuesos(bool estado)
     {

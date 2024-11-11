@@ -12,7 +12,7 @@ public class EnemyPart : MonoBehaviour
 
         if (mainScript.Vidas <= 0)
         {
-            Destroy(this.gameObject);
+            mainScript.Morir();
         }
     }
 }
