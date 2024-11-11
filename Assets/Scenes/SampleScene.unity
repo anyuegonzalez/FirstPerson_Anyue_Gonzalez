@@ -8502,7 +8502,7 @@ Transform:
   m_GameObject: {fileID: 8296172669384857488}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.06, y: 100.262184, z: 10.63}
+  m_LocalPosition: {x: 17.24, y: 100.262184, z: 10.56}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8578,6 +8578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452755561821245256}
+  - component: {fileID: 8931000943401235544}
   - component: {fileID: 8931000943401235543}
   - component: {fileID: 5282551042944696757}
   - component: {fileID: 2367339524170457187}
@@ -8683,9 +8684,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5006512735155643779}
   - component: {fileID: 8296172669384857489}
+  - component: {fileID: 8296172669384857490}
   m_Layer: 0
   m_Name: AmmoBox
-  m_TagString: Untagged
+  m_TagString: CajaMunicion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8697,7 +8699,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669384857488}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -9069,6 +9071,27 @@ MonoBehaviour:
     - {x: 0.31372824, y: -0.9339185, z: -0.171379}
     - {x: 0.73171496, y: -0.05500213, z: -0.679388}
     - {x: 0.40470815, y: -0.78219855, z: -0.4736842}
+--- !u!65 &8296172669384857490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669384857488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1281, y: 500, z: 770}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &8587989075207864305
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9117,6 +9140,19 @@ MonoBehaviour:
   alturaSalto: 3
   vidas: 100
   cam: {fileID: 1807449872}
+--- !u!114 &8931000943401235544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129824162920574754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b21fef49f7420d46b2a2eb9ce6fe09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9125,8 +9161,8 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 853110902}
   - {fileID: 738886863}
-  - {fileID: 1178689645}
   - {fileID: 2760386385453310512}
+  - {fileID: 1178689645}
   - {fileID: 3201177441872276590}
   - {fileID: 1159198855}
   - {fileID: 1373055756}

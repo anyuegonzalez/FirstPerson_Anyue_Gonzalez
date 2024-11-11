@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ParteEnemigo
+  - Interactuable
+  - CajaMunicion
   layers:
   - Default
   - TransparentFX
