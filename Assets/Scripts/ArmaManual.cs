@@ -23,8 +23,11 @@ public class ArmaManual : MonoBehaviour
             system.Play();
             if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
             {
-                Debug.Log(hitInfo.transform.name);
-                hitInfo.transform.GetComponent<EnemyPart>().RecibirDanho(misDatos.danhoAtaque);
+                if(hitInfo.transform.CompareTag("ParteEnemigo"))
+                {
+                    hitInfo.transform.GetComponent<EnemyPart>().RecibirDanho(misDatos.danhoAtaque);
+                }
+               
             }
         }
     }
