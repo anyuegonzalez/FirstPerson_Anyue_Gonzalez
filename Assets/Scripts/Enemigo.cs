@@ -17,15 +17,22 @@ public class Enemigo : MonoBehaviour
     private bool danhoRealizado = false;
     [SerializeField] private float vidas;
 
+    private Rigidbody[] huesos; // array de rigidbodys
+
     private Animator anim;
-   
+
+    public float Vidas { get => vidas; set => vidas = value; }
+
     void Start()
     {
-       agent = GetComponent<NavMeshAgent>();
-       anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        huesos = GetComponentsInChildren<Rigidbody>();
+        player = GameObject.FindObjectOfType<FirstPerson>(); //tipo player te devuelve
 
-       player = GameObject.FindObjectOfType<FirstPerson>(); //tipo player te devuelve
-    }  
+        CambiarEstadoHuesos(true);
+    }
+
     void Update()
     {
         Perseguir();
@@ -65,12 +72,15 @@ public class Enemigo : MonoBehaviour
             anim.SetBool("Attacking", true);
         }
     }
-    public void RecibirDanho(float danhoRecibido)
+    private void Morir()
     {
-        vidas -= danhoRecibido;
-        if(vidas <= 0)
+        CambiarEstadoHuesos(false);
+    }
+    private void CambiarEstadoHuesos(bool estado)
+    {
+        for (int i = 0; i < huesos.Length; i++)
         {
-            Destroy(this.gameObject);
+            huesos[i].isKinematic = estado;
         }
     }
 
