@@ -10,8 +10,4 @@ public class Spawner : MonoBehaviour
     {
         Instantiate(enemigoPrefab, puntosSpawn[0].position, Quaternion.identity);
     }
-    void Update()
-    {
-        
-    }
 }
