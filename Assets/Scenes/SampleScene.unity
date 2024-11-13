@@ -2050,6 +2050,37 @@ CapsuleCollider:
   m_Height: 0.6262875
   m_Direction: 1
   m_Center: {x: 0, y: 0.31314376, z: 0}
+--- !u!1 &1413639147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413639148}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1413639148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413639147}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.70559597, y: -0, z: -0, w: 0.70861435}
+  m_LocalPosition: {x: -3.3582764, y: -12.810638, z: -168.6737}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6003253346838976727}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1455738671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8548,7 +8579,8 @@ Transform:
   m_LocalPosition: {x: 3.3582764, y: 168.72684, z: -380.09055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1413639148}
   m_Father: {fileID: 5006512735155643779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6080596665642701949
@@ -8684,7 +8716,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5006512735155643779}
   - component: {fileID: 8296172669384857489}
+  - component: {fileID: 8296172669384857492}
   - component: {fileID: 8296172669384857490}
+  - component: {fileID: 8296172669384857491}
   m_Layer: 0
   m_Name: AmmoBox
   m_TagString: CajaMunicion
@@ -9092,6 +9126,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1281, y: 500, z: 770}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8296172669384857491
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669384857488}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b094cda13e170f44093b7fc290ebda98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8296172669384857492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669384857488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb069b6db08faa24bb6e3a736aa3bc91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &8587989075207864305
 MeshFilter:
   m_ObjectHideFlags: 0
