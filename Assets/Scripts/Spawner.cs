@@ -5,9 +5,17 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Transform[] puntosSpawn;
-    [SerializeField] private Enemigo enemigoPrefab;
+    [SerializeField] private Enemigo enemigoPrefab; //es un gameobject
     void Start()
     {
-        Instantiate(enemigoPrefab, puntosSpawn[0].position, Quaternion.identity);
+        StartCoroutine(Spawnear());
+    }
+    private IEnumerator Spawnear()
+    {
+        while (true)
+        {
+            Instantiate(enemigoPrefab, puntosSpawn[Random.Range(0, puntosSpawn.Length)].position, Quaternion.identity);
+            yield return new WaitForSeconds(2);
+        }
     }
 }

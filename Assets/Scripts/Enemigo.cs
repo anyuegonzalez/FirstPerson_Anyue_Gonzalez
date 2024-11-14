@@ -65,7 +65,7 @@ public class Enemigo : MonoBehaviour
 
 
         // si la distancia q nos queda hacia el objeto cae por debajo del stoppingDistance
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             // me paro ante el
             agent.isStopped = true;
