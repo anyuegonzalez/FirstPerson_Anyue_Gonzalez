@@ -62,6 +62,16 @@ public class FirstPerson : MonoBehaviour
         return resultado;
 
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.CompareTag("ParteEnemigo"))
+        {
+           Rigidbody rbEnemigo = hit.gameObject.GetComponent<Rigidbody>();
+            
+            Vector3 direccionFuerza = hit.transform.position - transform.position;
+            rbEnemigo.AddForce(direccionFuerza.normalized * 50, ForceMode.Impulse);
+        }
+    }
     public void RecibirDanho(float danhoRecibido)
     {
         vidas -= danhoRecibido;

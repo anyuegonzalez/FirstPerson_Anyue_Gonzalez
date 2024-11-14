@@ -28,9 +28,13 @@ public class WeaponHolder : MonoBehaviour
         {
             CambiarArma(2);
         }
+        if(Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            CambiarArma(3);
+        }
     }
 
-    private void CambiarArma(int nuevoIndice)
+    public void CambiarArma(int nuevoIndice)
     {
         armas[indiceArmaActual].SetActive(false);
 
