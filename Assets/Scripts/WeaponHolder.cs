@@ -6,7 +6,7 @@ public class WeaponHolder : MonoBehaviour
 {
     [SerializeField] GameObject[] armas;
 
-    int indiceArmaActual = -1; // en cuanto al array que te refieres
+    int indiceArmaActual = 0; // en cuanto al array que te refieres
     
     void Start()
     {
