@@ -39,7 +39,7 @@ public class Granada : MonoBehaviour
             {
                 collider.GetComponent<EnemyPart>().Explotar(); // desabilito el mov del enemigo impactado
                 collider.GetComponent<Rigidbody>().isKinematic = false; // dejo los huesos en dinamico
-                collider.GetComponent<Rigidbody>().AddExplosionForce(80, transform.position, radioDeteccion, 15.5f); // aplico explosion
+                collider.GetComponent<Rigidbody>().AddExplosionForce(80, transform.position, radioDeteccion, 15.5f, ForceMode.Impulse); // aplico explosion
 
             }
         }
