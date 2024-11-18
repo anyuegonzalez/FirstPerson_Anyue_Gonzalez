@@ -54,8 +54,9 @@ MonoBehaviour:
   queEsExplotable:
     serializedVersion: 2
     m_Bits: 0
-  radioDeteccion: 0
-  explosionPrefab: {fileID: 0}
+  radioDeteccion: 15
+  explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
 --- !u!135 &6509502754002097693
 SphereCollider:
   m_ObjectHideFlags: 0
