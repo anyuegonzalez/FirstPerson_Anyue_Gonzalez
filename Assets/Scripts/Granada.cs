@@ -23,14 +23,25 @@ public class Granada : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        // cuando toques suelo es cuando explota 
+    }
+
     private void OnDestroy()
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-        Collider[] collDetectados = Physics.OverlapSphere(transform.position, radioDeteccion, queEsExplotable);
-        if(collDetectados.Length > 0)
+        Collider[] collsDetectados = Physics.OverlapSphere(transform.position, radioDeteccion, queEsExplotable);
+        if(collsDetectados.Length > 0)
         {
-            
+            foreach(Collider collider in collsDetectados)
+            {
+                collider.GetComponent<EnemyPart>().Explotar(); // desabilito el mov del enemigo impactado
+                collider.GetComponent<Rigidbody>().isKinematic = false; // dejo los huesos en dinamico
+                collider.GetComponent<Rigidbody>().AddExplosionForce(50, transform.position, radioDeteccion, 3.5f); // aplico explosion
+
+            }
         }
         Debug.Log("No puedo mas, me voy de este mundo:(");
     }
