@@ -12,6 +12,8 @@ public class Granada : MonoBehaviour
 
     [SerializeField] private LayerMask queEsExplotable;
     [SerializeField] float radioDeteccion;
+
+    [SerializeField] private GameObject explosionPrefab;
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * fuerzaImpulso, ForceMode.Impulse);
@@ -23,10 +25,12 @@ public class Granada : MonoBehaviour
     }
     private void OnDestroy()
     {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
         Collider[] collDetectados = Physics.OverlapSphere(transform.position, radioDeteccion, queEsExplotable);
         if(collDetectados.Length > 0)
         {
-
+            
         }
         Debug.Log("No puedo mas, me voy de este mundo:(");
     }
