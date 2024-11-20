@@ -70,7 +70,19 @@ public class Enemigo : MonoBehaviour
             // me paro ante el
             agent.isStopped = true;
             anim.SetBool("Attacking", true);
+            EnfocarPlayer();
         }
+    }
+    private void EnfocarPlayer()
+    {
+        // calculo el vector que enfoque al jugador
+        Vector3 direccionAPlayer = (player.transform.position - this.gameObject.transform.position).normalized; // se puede poner "transform.position" solamente
+        
+        // me aseguro que no se vuelque el enemigo al ver al player
+        direccionAPlayer.y = 0;
+
+        // calculo la rotacion a la que me tengo que girar para orientarme en esa direccion
+        transform.rotation = Quaternion.LookRotation(direccionAPlayer);
     }
     public void Morir()
     {
