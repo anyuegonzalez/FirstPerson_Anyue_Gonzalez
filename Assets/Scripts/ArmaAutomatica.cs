@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.VirtualTexturing;
 
-public class ArmaManual : MonoBehaviour
+public class ArmaAutomatica : MonoBehaviour
 {
     [SerializeField] private ParticleSystem system;
-    [SerializeField] private ArmaSO misDatos;
-    
+    [SerializeField] private ArmaSO misDatos; // scriptableobject
+
     private Camera cam;
     void Start()
     {
-        //cam es la camara principal de la escena "MainCamera"
         cam = Camera.main;
-
-       // misDatos.cadenciaAtaque;
-
+        
     }
-
-   
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             system.Play();
-            if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
             {
-                if(hitInfo.transform.CompareTag("ParteEnemigo"))
+                if (hitInfo.transform.CompareTag("ParteEnemigo"))
                 {
                     hitInfo.transform.GetComponent<EnemyPart>().RecibirDanho(misDatos.danhoAtaque);
                 }
-               
+
             }
         }
+        
     }
 }
