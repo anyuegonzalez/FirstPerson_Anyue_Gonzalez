@@ -6,21 +6,24 @@ public class ArmaManual : MonoBehaviour
 {
     [SerializeField] private ParticleSystem system;
     [SerializeField] private ArmaSO misDatos;
-    
+
+    private float timer;
+
     private Camera cam;
     void Start()
     {
         //cam es la camara principal de la escena "MainCamera"
         cam = Camera.main;
-
-       // misDatos.cadenciaAtaque;
+        timer = misDatos.cadenciaAtaque;
 
     }
 
    
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        timer += 1 * Time.deltaTime;
+
+        if(Input.GetMouseButtonDown(0) && timer >= misDatos.cadenciaAtaque)
         {
             system.Play();
             if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
@@ -31,6 +34,7 @@ public class ArmaManual : MonoBehaviour
                 }
                
             }
-        }
+            timer = 0;
+        }     
     }
 }
