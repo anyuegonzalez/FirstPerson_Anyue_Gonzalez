@@ -16,7 +16,7 @@ public class WaterEffect : MonoBehaviour
         //busca en tu profile si tienes el efecto lens diostorsion
         if(effect.profile.TryGet(out LensDistortion distorsion))
         {
-
+            //distorsion.xMultiplier;
         }
     }
 }
