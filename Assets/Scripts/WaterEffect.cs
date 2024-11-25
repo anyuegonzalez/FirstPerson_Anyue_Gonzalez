@@ -20,7 +20,7 @@ public class WaterEffect : MonoBehaviour
         if(effect.profile.TryGet(out LensDistortion distorsion))
         {
             FloatParameter miVariable = new FloatParameter( 1 + Mathf.Cos(velocidad * Time.time) / 2);
-            FloatParameter miVariable2 = new FloatParameter(1 + Mathf.Cos(velocidad * Time.time) / 2);
+            FloatParameter miVariable2 = new FloatParameter(1 + Mathf.Sin(velocidad * Time.time) / 2);
             distorsion.xMultiplier.SetValue(miVariable);
             distorsion.xMultiplier.SetValue(miVariable2);
         }
