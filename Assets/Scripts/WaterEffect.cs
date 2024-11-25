@@ -19,10 +19,10 @@ public class WaterEffect : MonoBehaviour
         //busca en tu profile si tienes el efecto lens diostorsion
         if(effect.profile.TryGet(out LensDistortion distorsion))
         {
-            FloatParameter miVariable = new FloatParameter( 1 + Mathf.Cos(velocidad * Time.time) / 2);
-            FloatParameter miVariable2 = new FloatParameter(1 + Mathf.Sin(velocidad * Time.time) / 2);
-            distorsion.xMultiplier.SetValue(miVariable);
-            distorsion.xMultiplier.SetValue(miVariable2);
+            FloatParameter xValue = new FloatParameter( 1 + Mathf.Cos(velocidad * Time.time) / 2);
+            FloatParameter yValue = new FloatParameter(1 + Mathf.Sin(velocidad * Time.time) / 2);
+            distorsion.xMultiplier.SetValue(xValue);
+            distorsion.xMultiplier.SetValue(yValue);
         }
     }
 }
