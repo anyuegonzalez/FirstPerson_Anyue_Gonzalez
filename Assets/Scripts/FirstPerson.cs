@@ -32,6 +32,7 @@ public class FirstPerson : MonoBehaviour
         AplicarGravedad();
         DeteccionSuelo();
         MoverYRotar();
+        Saltar();
      
     }
     private void MoverYRotar()
