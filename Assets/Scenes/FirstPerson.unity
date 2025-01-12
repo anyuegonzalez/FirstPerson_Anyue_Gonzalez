@@ -288,7 +288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &112077731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9348,12 +9348,12 @@ GameObject:
   - component: {fileID: 1588872884}
   - component: {fileID: 1588872883}
   m_Layer: 5
-  m_Name: CanvasPausa
+  m_Name: canvasPausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1588872883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9426,7 +9426,7 @@ RectTransform:
   m_GameObject: {fileID: 1588872882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.84974, y: 0.84974, z: 0.84974}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 112077731}
@@ -9434,7 +9434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400, y: 299.61978}
+  m_AnchoredPosition: {x: 400, y: 178}
   m_SizeDelta: {x: 800, y: 599.23956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1719276623
@@ -15160,15 +15160,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8751759777135225974}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1267961, y: 0.7931353, z: -0.17678544, w: -0.56886387}
-  m_LocalPosition: {x: 35.232525, y: 100.945, z: 12.543485}
+  m_LocalRotation: {x: -0, y: -0.74524575, z: -0, w: 0.66678995}
+  m_LocalPosition: {x: 35.172726, y: 100.92039, z: 12.437156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 452755561821245256}
   - {fileID: 1189306247}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -96.36, z: 0}
 --- !u!4 &3295203782074742273
 Transform:
   m_ObjectHideFlags: 0
@@ -15977,7 +15977,7 @@ MonoBehaviour:
   pies: {fileID: 1190219898}
   alturaSalto: 3
   vidas: 100
-  Texto_vidas: {fileID: 0}
+  Texto_vidas: {fileID: 1212463851}
   cam: {fileID: 1807449872}
 --- !u!114 &8931000943401235544
 MonoBehaviour:
