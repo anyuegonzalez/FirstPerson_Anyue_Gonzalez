@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23edcc7988aad34e93c7182a814d8c8, type: 3}
   m_Name: DialogaSO
   m_EditorClassIdentifier: 
-  frases: []
-  tiempoEntreLetras: 0
+  frases:
+  - Hola, me gusta el chocolate con leche.
+  - "\xBFTu madre est\xE1 soltera?"
+  tiempoEntreLetras: 0.1
