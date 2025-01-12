@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class VIctoria : MonoBehaviour
@@ -20,5 +21,7 @@ public class VIctoria : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("FirstPerson");
         DynamicGI.UpdateEnvironment();
+
+       
     }
 }
