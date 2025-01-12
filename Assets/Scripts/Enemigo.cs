@@ -7,6 +7,8 @@ using UnityEngine.Rendering;
 
 public class Enemigo : MonoBehaviour
 {
+    private bool estaMuerto = false;
+
     private NavMeshAgent agent;
     private FirstPerson player;
     private bool ventanaAbierta = false;
@@ -37,6 +39,8 @@ public class Enemigo : MonoBehaviour
 
     void Update()
     {
+        if (estaMuerto) return;
+
         Perseguir();
 
         // solo si la ventana y esta abierta, y aun no ha hecho daño
@@ -88,6 +92,12 @@ public class Enemigo : MonoBehaviour
     }
     public void Morir()
     {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.AddPoints(puntosDeMuerte); 
+        }
+
+        estaMuerto = true;
         agent.enabled = false;
         anim.enabled = false;
         CambiarEstadoHuesos(false);
@@ -99,16 +109,6 @@ public class Enemigo : MonoBehaviour
         {
             huesos[i].isKinematic = estado;
         }
-    }
-    private void Muerte()
-    {
-        if (ScoreManager.Instance != null)
-        {
-            ScoreManager.Instance.AddPoints(puntosDeMuerte);
-        }
-
-        // Destruir al enemigo
-        Destroy(gameObject);
     }
     #region Eventos de animación
     private void FinAtaque()
