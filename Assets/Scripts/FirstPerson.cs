@@ -5,6 +5,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Video;
+using TMPro;
+
 
 public class FirstPerson : MonoBehaviour
 {
@@ -14,7 +16,12 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private LayerMask queEsSuelo;
     [SerializeField] private Transform pies;
     [SerializeField] private float alturaSalto;
+
+
+
     [SerializeField] private float vidas;
+
+    [SerializeField] TMP_Text Texto_vidas;
 
     [SerializeField] private Camera cam;
 
@@ -28,7 +35,8 @@ public class FirstPerson : MonoBehaviour
     
     void Update()
     {
-        
+        Texto_vidas.text = "Vidas; " + vidas;
+
         AplicarGravedad();
         DeteccionSuelo();
         MoverYRotar();
@@ -94,4 +102,5 @@ public class FirstPerson : MonoBehaviour
             movimientoVertical.y = Mathf.Sqrt(-2 * escalaGravedad * alturaSalto);
         }
     }
+
 }

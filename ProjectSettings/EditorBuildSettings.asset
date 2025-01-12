@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Inicio.unity
     guid: f89493c3b4c7f6547ae41ae5f1e7abdd
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/FirstPerson.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Muerte.unity
     guid: c93977834d2f9bf439909c3ba8041546
+  - enabled: 1
+    path: Assets/Scenes/Victoria.unity
+    guid: 460ca5032f123fb44b5ae52b7e76f1e9
   m_configObjects: {}

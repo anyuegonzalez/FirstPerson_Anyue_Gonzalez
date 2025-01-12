@@ -17,6 +17,8 @@ public class Enemigo : MonoBehaviour
     private bool danhoRealizado = false;
     [SerializeField] private float vidas;
 
+    [SerializeField] int puntosDeMuerte;
+
     private Rigidbody[] huesos; // array de rigidbodys
 
     private Animator anim;
@@ -98,7 +100,16 @@ public class Enemigo : MonoBehaviour
             huesos[i].isKinematic = estado;
         }
     }
+    private void Muerte()
+    {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.AddPoints(puntosDeMuerte);
+        }
 
+        // Destruir al enemigo
+        Destroy(gameObject);
+    }
     #region Eventos de animación
     private void FinAtaque()
     {
