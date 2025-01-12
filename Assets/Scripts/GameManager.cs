@@ -12,13 +12,18 @@ public class GameManager : MonoBehaviour
     private bool estaMuerto = false;
 
     [SerializeField] int puntosObjetivo = 25;
+    public FirstPerson player;
     void Start()
     {
         canvasPausa.SetActive(false);
     }
     void Update()
     {
-    
+        if (ScoreManager.Instance != null && ScoreManager.Instance.Puntuacion >= puntosObjetivo)
+        {
+            SceneManager.LoadScene("Victoria");
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (canvasPausa.activeSelf)

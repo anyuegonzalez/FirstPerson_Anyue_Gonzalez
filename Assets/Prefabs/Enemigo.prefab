@@ -422,6 +422,7 @@ MonoBehaviour:
     m_Bits: 64
   danhoAtaque: 25
   vidas: 100
+  puntosDeMuerte: 1
 --- !u!195 &3033555989742010406
 NavMeshAgent:
   m_ObjectHideFlags: 0

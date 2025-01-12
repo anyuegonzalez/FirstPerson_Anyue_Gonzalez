@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPausa: {fileID: 1588872882}
-  puntosObjetivo: 50
+  puntosObjetivo: 25
 --- !u!4 &399926381
 Transform:
   m_ObjectHideFlags: 0
@@ -15916,7 +15916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2760386385453310512}
   m_Layer: 6
-  m_Name: first person
+  m_Name: firstPerson
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

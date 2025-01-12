@@ -26,6 +26,7 @@ public class ScoreManager : MonoBehaviour
     public void AddPoints(int puntos)
     {
         puntuacion += puntos;
+        puntos++;
     }
     void Start()
     {
@@ -34,6 +35,9 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        Texto_puntuacion.text = "Puntos:; " + puntuacion;
+        if (ScoreManager.instance != null)
+        {
+            Texto_puntuacion.text = "Puntos: " + ScoreManager.instance.puntuacion;
+        }
     }
 }
