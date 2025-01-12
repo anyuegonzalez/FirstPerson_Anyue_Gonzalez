@@ -13425,31 +13425,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
-    - target: {fileID: 6098662140274777231, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098662140274777231, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
-        type: 3}
-      propertyPath: outlineColor.b
-      value: 0.132921
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098662140274777231, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
-        type: 3}
-      propertyPath: outlineColor.g
-      value: 0.132921
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098662140274777231, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
-        type: 3}
-      propertyPath: outlineColor.r
-      value: 0.9716981
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098662140274777231, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
-        type: 3}
-      propertyPath: precomputeOutline
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7278888018646044067, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13499,11 +13474,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8627630669359171744, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
-        type: 3}
-      propertyPath: tiempoRotacion
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14207,7 +14177,7 @@ GameObject:
   - component: {fileID: 2760386385453310512}
   m_Layer: 6
   m_Name: first person
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

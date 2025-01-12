@@ -1277,6 +1277,7 @@ GameObject:
   - component: {fileID: 6098662140274777231}
   - component: {fileID: 8627630669359171744}
   - component: {fileID: 3957651691325309576}
+  - component: {fileID: 1298019883636410142}
   m_Layer: 8
   m_Name: NPC
   m_TagString: Untagged
@@ -1308,15 +1309,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5259474647326813167}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineColor: {r: 0.9716981, g: 0.132921, b: 0.132921, a: 1}
   outlineWidth: 2
-  precomputeOutline: 0
+  precomputeOutline: 1
   bakeKeys: []
   bakeValues: []
 --- !u!114 &8627630669359171744
@@ -1331,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a602e052f1b8e054cb5cef6bbf490a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoRotacion: 0.5
+  tiempoRotacion: 0.2
   dialogo: {fileID: 11400000, guid: b13a19f85d5b22d44bbd2dd5be92710e, type: 2}
   cameraPoint: {fileID: 8554683379658482792}
 --- !u!195 &3957651691325309576
@@ -1356,6 +1357,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1298019883636410142
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259474647326813167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.2861404
+  m_Direction: 1
+  m_Center: {x: 0, y: -1.0419655, z: -0.26}
 --- !u!1 &5276709980028354552
 GameObject:
   m_ObjectHideFlags: 0
