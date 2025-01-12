@@ -1,4 +1,4 @@
-//using DG.Tweening;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +20,7 @@ public class Npc : MonoBehaviour
     // para que el npc se gire hacia el que le esta interactuando (jugador)
     public void Interactuar(Transform interactuador)
     {
-        //transform.DOLookAt(interactuador.position, tiempoRotacion, AxisConstraint.Y).OnComplete(() => SistemaDialogo.trono.IniciarDialogo(dialogo, cameraPoint));
+        transform.DOLookAt(interactuador.position, tiempoRotacion, AxisConstraint.Y).OnComplete(() => SistemaDialogo.trono.IniciarDialogo(dialogo, cameraPoint));
     }
     private void OnMouseEnter()
     {
