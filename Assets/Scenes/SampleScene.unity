@@ -13445,6 +13445,11 @@ PrefabInstance:
       propertyPath: outlineColor.r
       value: 0.9716981
       objectReference: {fileID: 0}
+    - target: {fileID: 6098662140274777231, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
+        type: 3}
+      propertyPath: precomputeOutline
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7278888018646044067, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13494,6 +13499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627630669359171744, guid: 25893b3e2e3689046a2b2fbbb6fa0098,
+        type: 3}
+      propertyPath: tiempoRotacion
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
