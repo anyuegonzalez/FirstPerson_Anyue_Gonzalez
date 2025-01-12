@@ -286,10 +286,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.5754717, g: 0.06786222, b: 0.18015632, a: 1}
+    m_PressedColor: {r: 0.6886792, g: 0.10720008, b: 0.10720008, a: 1}
+    m_SelectedColor: {r: 0.745283, g: 0.10194911, b: 0.10194911, a: 1}
+    m_DisabledColor: {r: 0.9150943, g: 0.31510323, b: 0.31510323, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.8962641, b: 0.13243146, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -573,6 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9116d8ef5c9aa740a3542eeea02c6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Texto_Muerte: {fileID: 2147329153}
 --- !u!224 &1411886579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -817,10 +818,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Reiniciar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 71d234a9990c2e54295e983b1af50bec, type: 2}
+  m_sharedMaterial: {fileID: -3777079126963876212, guid: 71d234a9990c2e54295e983b1af50bec,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -906,7 +908,7 @@ GameObject:
   - component: {fileID: 2147329154}
   - component: {fileID: 2147329153}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Muerte_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
