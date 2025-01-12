@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class VIctoria : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] TMP_Text Texto_Victoria;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        Texto_Victoria.text = "¡ENHORABUENA, HAS GANADO!, te has ganado una galleta";
+    }
+    public void Reiniciar()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("FirstPerson");
     }
 }

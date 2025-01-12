@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Muerte : MonoBehaviour
 {
-    // Start is called before the first frame update
+  
+  [SerializeField] TMP_Text Texto_Muerte;
+    
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        Texto_Muerte.text = "Vaya, has muerto";
     }
     public void Reiniciar()
     {
