@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] TMP_Text Texto_puntuacion;
 
     public static ScoreManager Instance { get => instance; set => instance = value; }
+    public int Puntuacion { get => puntuacion; set => puntuacion = value; }
 
     void Awake()
     {
