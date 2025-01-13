@@ -945,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &286466585
 GameObject:
   m_ObjectHideFlags: 0
@@ -16039,7 +16039,7 @@ MonoBehaviour:
   velocidadMovimiento: 5
   escalaGravedad: -9.81
   radioDeteccion: 0.14
-  controller: {fileID: 0}
+  controller: {fileID: 5282551042944696757}
   movimientoVertical: {x: 0, y: 0, z: 0}
   queEsSuelo:
     serializedVersion: 2
