@@ -48,11 +48,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void Titulo()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Menu");
-    }
     public void Salir()
     {
         print("cerrando...");
