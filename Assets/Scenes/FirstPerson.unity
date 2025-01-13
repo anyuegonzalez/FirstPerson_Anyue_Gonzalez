@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPausa: {fileID: 1588872882}
-  puntosObjetivo: 100
+  puntosObjetivo: 30
   player: {fileID: 8931000943401235543}
 --- !u!4 &399926381
 Transform:
@@ -16200,8 +16200,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1159198855}
+  - {fileID: 1907089291}
   - {fileID: 399926381}
+  - {fileID: 1159198855}
   - {fileID: 1715629640}
   - {fileID: 2760386385453310512}
   - {fileID: 697640015}
@@ -16211,4 +16212,3 @@ SceneRoots:
   - {fileID: 4397329255129209061}
   - {fileID: 1178689645}
   - {fileID: 1373055756}
-  - {fileID: 1907089291}
