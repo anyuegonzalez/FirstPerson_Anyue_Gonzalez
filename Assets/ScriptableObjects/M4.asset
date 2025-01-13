@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03d10fd5b68cc946b9788143fb5db7b, type: 3}
   m_Name: M4
   m_EditorClassIdentifier: 
-  balasCargador: 60
+  balasCargador: 100
   balasBolsa: 200
   distanciaAtaque: 500
   danhoAtaque: 15
