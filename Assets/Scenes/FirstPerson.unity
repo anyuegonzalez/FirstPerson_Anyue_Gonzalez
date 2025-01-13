@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPausa: {fileID: 1588872882}
-  puntosObjetivo: 25
+  puntosObjetivo: 100
   player: {fileID: 8931000943401235543}
 --- !u!4 &399926381
 Transform:
