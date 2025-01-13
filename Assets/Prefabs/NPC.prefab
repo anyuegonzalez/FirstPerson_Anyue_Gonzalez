@@ -1156,7 +1156,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1430212598029110512}
-  - component: {fileID: 5123702715011135394}
   m_Layer: 8
   m_Name: 'NPCvisual '
   m_TagString: Untagged
@@ -1181,27 +1180,6 @@ Transform:
   - {fileID: 7701363771680241752}
   m_Father: {fileID: 7278888018646044067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5123702715011135394
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4951776806784784608}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4cd1a65a2b86539448848386d2e491a7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5087698259928439775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1254,6 @@ GameObject:
   - component: {fileID: 7278888018646044067}
   - component: {fileID: 6098662140274777231}
   - component: {fileID: 8627630669359171744}
-  - component: {fileID: 3957651691325309576}
   - component: {fileID: 1298019883636410142}
   m_Layer: 8
   m_Name: NPC
@@ -1335,28 +1312,6 @@ MonoBehaviour:
   tiempoRotacion: 0.2
   dialogo: {fileID: 11400000, guid: b13a19f85d5b22d44bbd2dd5be92710e, type: 2}
   cameraPoint: {fileID: 8554683379658482792}
---- !u!195 &3957651691325309576
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5259474647326813167}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!136 &1298019883636410142
 CapsuleCollider:
   m_ObjectHideFlags: 0

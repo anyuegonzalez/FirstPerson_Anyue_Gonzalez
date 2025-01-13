@@ -92,16 +92,20 @@ public class Enemigo : MonoBehaviour
     }
     public void Morir()
     {
-        if (ScoreManager.Instance != null)
+        if(!estaMuerto)
         {
-            ScoreManager.Instance.AddPoints(puntosDeMuerte); 
-        }
+            if (ScoreManager.Instance != null)
+            {
+                ScoreManager.Instance.AddPoints(puntosDeMuerte); 
+            }
 
-        estaMuerto = true;
-        agent.enabled = false;
-        anim.enabled = false;
-        CambiarEstadoHuesos(false);
-        Destroy(gameObject, 10); // se destruye pasado esos frames el objeto
+            estaMuerto = true;
+            agent.enabled = false;
+            anim.enabled = false;
+            CambiarEstadoHuesos(false);
+            Destroy(gameObject, 10); // se destruye pasado esos frames el objeto
+
+        }
     }
     private void CambiarEstadoHuesos(bool estado)
     {
@@ -127,5 +131,11 @@ public class Enemigo : MonoBehaviour
         ventanaAbierta = false;
     }
     #endregion
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(attackPoint.position, radioDeteccion);
+    }
 
 }

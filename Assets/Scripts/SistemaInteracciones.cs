@@ -17,6 +17,7 @@ public class SistemaInteracciones : MonoBehaviour
    
     void Update()
     {
+        Debug.Log(cam.name);
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, distanciaInteraccion)) //forwad para delante
         {
             if (hit.transform.TryGetComponent(out CajaMunicion scripCaja))
@@ -24,10 +25,18 @@ public class SistemaInteracciones : MonoBehaviour
                 // activar el outline de la caja de municion
                 interactuableActual = hit.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    scripCaja.Abrir();
+                }
             }
-            if(Input.GetKeyDown(KeyCode.E))
+            else if(hit.transform.TryGetComponent(out Npc npc))
             {
-                scripCaja.Abrir();
+                Debug.Log("sdfdsfffffff");
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    npc.Interactuar(transform);
+                }
             }
         }
         else if(interactuableActual) // si tenia un interactuable pero ya no...

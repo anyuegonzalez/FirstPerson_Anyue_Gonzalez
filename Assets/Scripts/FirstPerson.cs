@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Video;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class FirstPerson : MonoBehaviour
@@ -17,7 +18,7 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private Transform pies;
     [SerializeField] private float alturaSalto;
 
-
+    private bool estaMuerto = false;
 
     [SerializeField] private float vidas;
 
@@ -36,6 +37,8 @@ public class FirstPerson : MonoBehaviour
     void Update()
     {
         Texto_vidas.text = "Vidas; " + vidas;
+
+        if (estaMuerto) return;
 
         AplicarGravedad();
         DeteccionSuelo();
@@ -86,7 +89,7 @@ public class FirstPerson : MonoBehaviour
         vidas -= danhoRecibido;
         if(vidas <=0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Muerte");
         }
     }
     // esto sirve para dibujar cualquier figura en la escena
