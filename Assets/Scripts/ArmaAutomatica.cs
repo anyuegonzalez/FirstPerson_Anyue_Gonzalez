@@ -25,7 +25,7 @@ public class ArmaAutomatica : MonoBehaviour
                 {
                     hitInfo.transform.GetComponent<EnemyPart>().RecibirDanho(misDatos.danhoAtaque);
                 }
-
+               
             }
         }
         

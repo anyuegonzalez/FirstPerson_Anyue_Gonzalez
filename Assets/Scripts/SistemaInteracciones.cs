@@ -32,7 +32,6 @@ public class SistemaInteracciones : MonoBehaviour
             }
             else if(hit.transform.TryGetComponent(out Npc npc))
             {
-                Debug.Log("sdfdsfffffff");
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     npc.Interactuar(transform);
